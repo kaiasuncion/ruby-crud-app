@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People List</title>
+</head>
+<body>
+    <h1>People List</h1>
+    <ul>
+        <% @people.each do |person| %>
+            <li><a href="/people/<%= person['id'] %>"><%= person['name'] %></a> - <%= person['age'] %> years old</li>
+        <% end %>
+    </ul>
+</body>
+</html>

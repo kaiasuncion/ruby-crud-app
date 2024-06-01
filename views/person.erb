@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= person['name'] %></title>
+</head>
+<body>
+    <h1><%= person['name'] %></h1>
+    <p>Age: <%= person['age'] %></p>
+
+    <a href="/people">Back to list</a>
+    
+    <form action="/people/<%= person['id'] %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete" onclick="return confirm('Are you sure you want to delete this person?');">
+    </form>
+
+    <h1>Update Age for <%= person['name'] %></h1>
+    <form action="/people/<%= person['id'] %>/update_age" method="POST">
+        <input type="hidden" name="_method" value="PATCH">
+        <label for="age">New Age:</label>
+        <input type="number" id="age" name="age" value="<%= person['age'] %>" required>
+        <button type="submit">Update Age</button>
+    </form>
+
+</body>
+</html>
