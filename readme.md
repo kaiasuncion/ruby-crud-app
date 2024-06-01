@@ -4,7 +4,7 @@ Sinatra Version: 4.0
 # Mac Env Setup for Ruby
 1. brew install rbenv
 2. rbenv install 2.7.8
-3. `rbenv global 2.7.8` or `rbenv local 3.1.2`
+3. `rbenv global 2.7.8` or `rbenv local 2.7.8`
 
 https://github.com/rbenv/rbenv
 
